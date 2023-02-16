@@ -1,0 +1,65 @@
+<div class="container" role="main">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+              <ol class="list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start" style="padding-bottom: 5px!important;">
+                  <div class="col-md-12">
+                    <label for="inputEnterYourPrompt" class="form-label">
+                      Enter your prompt.
+                      <p class="breadcrumb-item" style="font-size: xx-small;">Be as specific as possible.</p>
+                    </label>
+                    <input type="text" class="form-control" id="inputEnterYourPrompt" #prompt>
+                  </div>
+    
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start" style="padding-bottom: 5px!important;">
+                  <div class="col-md-12">
+                    <label for="inputWordCount" class="form-label">
+                      Word Count
+                    </label>
+                    <input type="number" class="form-control" id="inputWordCount" #counts>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start" style="padding-bottom: 5px!important;">
+                  <div class="col-md-12">
+                    <label for="inputFormat" class="form-label">
+                      Format
+                      <p style="font-size: xx-small;">
+                        e.g "5 paragraphs", "in Shakespeare's voice", "using formal language", "one pro one con per paragraph"
+                      </p>
+                    </label>
+                    <input type="text" class="form-control" id="inputFormat">
+                  </div>
+                </li>
+                <li style="padding-bottom: 5px!important; list-style-type: none!important;">
+                  <div class="d-grid gap-2">
+                    <br>
+                    &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary " (click)="generateText(counts.value, prompt.value)">Generate</button>
+                  </div>          
+                </li>
+              </ol>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <label for="inputOutput" class="form-label">
+                  Output
+                  <p style="font-size: xx-small;">
+                    copy to clipboard and begin using!
+                  </p>
+                </label>                
+                <p class="pre" style=" word-wrap: normal!important; padding-bottom: 15px!important;">
+                    {{text}}
+                </p>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
